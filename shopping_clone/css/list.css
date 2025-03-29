@@ -1,0 +1,68 @@
+                                       /* 列表页专有的css */
+/* 列表页的导航部分 */
+.nav .navleft {
+	float: left;
+}
+.nav .navleft ul li {
+	float: left;
+	font-weight: 700;
+	font-size: 16px;
+	padding:0 30px;
+	line-height: 47px;
+}
+.nav .navright {
+	float: left;
+}
+.nav .navright ul {
+	margin-left: 35px;
+}
+.nav .navright ul li {
+	float: left;
+}
+.nav .navright ul li a {
+	display: block;
+	line-height: 47px;
+	font-size: 14px;
+	padding-left: 35px;
+} 
+.nav .navright ul li:last-child a::after {       /* 注意这个地方的写法格式 */
+	content: '';
+	font-family: 'icomoon';
+}
+
+
+/* 列表页主体部分 */
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+.contain_hd {
+	height: 100px;
+}
+.contain_hd h3 {
+	margin: 5px;
+	text-align: center;
+	line-height: 70px;
+	font-weight: 700;
+	font-size: 24px;
+	color: #b1191a;
+}
+.contain_hd p {
+	text-align: center;
+	line-height: 5px;
+}
+.contain_bd ul li {
+	float: left;
+	margin-right: 13px;
+	width: 290px;
+	height: 460px;
+	border: 1px solid transparent;
+	/* 这里有一个小细节:因为要使鼠标放到li上会有红色边框,所以给li加一个边框,但这个边框看不到,即加透明边框,再设置hover(65行代码);如果直接设置hover而不给li设置透明边框,图片会在鼠标经过时抖动 */
+	/* 所以当出现图片抖动使时,可以给li加一个透明边框 */
+}
+.contain_bd ul li:hover {
+	border: 1px solid #b1191a;
+}
+.contain_bd ul li:nth-child(4n) {      /* 是4的倍数的小li右外边距是0 使一行可以放四个图片而不是三个图片*/
+	margin-right: 0;
+}

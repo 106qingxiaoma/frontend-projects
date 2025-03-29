@@ -1,0 +1,179 @@
+/* main主题模块样式文件 */
+
+/* 首页main专有模块 start */
+.w .main {
+	width: 980px;
+	height: 455px;
+	margin-left: 220px;      /* main盒子向右移,隔开全部商品分类下方的导航栏 */
+	margin-top: 10px;
+}
+.w .main .focus {
+	float: left;
+	width: 721px;
+	height: 455px;
+}
+.w .main .focus ul li img {
+	width: 721px;
+	height: 455px;
+}
+.w .main .newflash {
+	float: right;
+	width: 250px;
+	height: 455px;
+}
+.w .main .newflash .news {
+	height: 165px;
+	border: 1px solid #dfdfdf;
+}
+.w .main .newflash .lifesevice {
+	height: 209px;
+	border-left:1px solid #dfdfdf;
+	border-bottom:1px solid #dfdfdf;
+	border-right:1px solid #dfdfdf;
+	overflow: hidden;
+}
+.w .main .newflash .bargain img {
+	width: 250px;
+	height: 75px;
+	margin-top: 5px;
+}
+.newflash .news .news-hd {
+	height: 33px;
+	border-bottom: 1px dotted #dfdfdf;
+}
+.newflash .news .news-hd h5 {
+	float: left;
+	text-align: center;
+	line-height: 33px;
+	font-size: 14px;
+	padding-left: 15px;
+}
+.newflash .news .news-hd .more {
+	float: right;
+	padding-right: 15px;
+	text-align: center;
+	line-height: 33px;
+}
+.newflash .news .news-hd .more::after {
+	content: '';
+	font-family: 'icomoon';
+	margin-left: 3px;
+}
+.newflash .news .news-bd ul li {
+	height: 24px;
+	line-height: 24px;
+	padding: 5px 15px 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.newflash .lifesevice ul li {
+	float: left;
+	width: 63px;
+	height: 71px;
+	border-bottom: 1px solid #dfdfdf;
+	border-right: 1px solid #dfdfdf;
+	text-align: center;
+}
+.newflash .lifesevice ul {
+	/* 在li中设置左浮动和盒子宽高之后并不能满足一行放四个盒子的要求,所以要在li的父盒子,也就是ul,给ul设置一个宽度使四个盒子可以在一行显示 。但这样虽然盒子在一排显示，但是超出了范围，所以在livesevice中设置overflow:hidden*/
+	width: 252px;
+}
+.newflash .lifesevice ul li i {
+	display: inline-block;     /* i要转化成行内块元素,这样宽高才起作用 */
+	width: 24px;
+	height: 28px;
+	background-color: pink;
+	margin-top: 12px;
+}
+/* 推荐模块start */
+.recom {
+	height: 163px;
+	background-color: #ebebeb;
+	margin-top: 12px;
+}
+.w .recom-hd {
+	float: left;
+	width: 205px;
+	height: 163px;
+	background-color: #5c5251;
+	text-align: center;
+	padding-top: 30px;
+}
+.w .recom-bd {
+	position: relative;
+	float: left;
+	height: 163px;
+}
+.w .recom-bd li {
+	float: left;
+}
+.w .recom-bd li::after {
+	content:'';
+	position: absolute;
+	right: 0;
+	top: 12px;
+	width: 1px;
+	height: 145px;
+	background-color: #dddddd;
+}
+
+ /* 楼层区域制作start */
+ .floor .box-hd {
+	 height: 30px;
+	 border-bottom: 2px solid #b1191a;
+ }
+ .floor .box-hd h3 {
+	 float: left;
+	 font-size: 18px;
+	 color: #b1191a;
+	 font-weight: 400;
+ }
+ .floor .box-hd .tab-list {
+	 float: right;
+	 line-height: 30px;
+ }
+ .floor .box-hd .tab-list li {
+	 float: left;
+ }
+ .floor .box-hd .tab-list li a {
+	 margin: 0 10px;
+ }
+ .floor .w {
+	 margin-top: 30px;
+ }
+ .box-bd {
+	 height: 361px;
+	 background-color: pink;
+ }
+ .tab-list-item div {
+	 float: left;
+	 height: 361px;
+ }
+.tab-list-item .col210 {
+	 width: 210px;
+	 background-color: #f9f9f9;
+ }
+ .tab-list-item .col329 {
+	 width: 329px;
+ }
+ .tab-list-item .col221 {
+	 width: 221px;
+	 
+ }
+ .tab-list-item .col219 {
+	 width: 219px;
+ }
+ .tab-list-item .col210 ul {
+	 margin-left: 12px;
+ }
+ .tab-list-item .col210 ul li {
+	 float: left;
+	 width: 85px;
+	 height: 34px;
+	 border-bottom: 1px solid #cccccc;
+	 text-align: center;
+	 line-height: 34px;
+	 margin-right: 10px;
+ }
+ 

@@ -1,0 +1,110 @@
+                                            /* 注册模块文件 */
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+header {
+	height: 84px;
+	border-bottom: 1px solid #c81523;
+}
+.logo {
+	margin-top: 18px;
+}
+.logo img {
+	width: 250px;
+	height: 80px;
+}
+.registerarea {
+	height: 522px;
+	border: 1px solid #cccccc;
+	margin-top: 20px;
+}
+.registerarea .registerarea_hd {
+	height: 40px;
+	background-color: #fdffeb;
+	border-bottom: 1px solid #c0ffdb;
+}
+.registerarea_hd .hd_left {
+	float: left;
+	line-height: 40px;
+	font-size: 12px;
+	margin-left: 10px;
+}
+.registerarea_hd .hd_right {
+	float: right;
+	line-height:40px;
+	font-size: 12px;
+	margin-right: 10px;
+}
+.registerarea_hd .hd_right a {
+	color: red;
+}
+.registerarea_bd {
+	width: 600px;
+	margin: 50px auto 0;
+}
+
+/* 表单的设置,重点看 */
+.registerarea_bd ul li {
+	margin-bottom: 20px;
+}
+.registerarea_bd ul li label {
+	display:inline-block;     /* 不能转化为块级元素,因为要使文字和表单框在一行显示,所以要转化成行内块元素 */
+	width: 88px;      /* 因为文字对于表单框都是右对齐,所以给label添加一个宽度,使文字右对齐 */
+	text-align: right;
+	margin-right: 8px;
+}
+.registerarea_bd ul li .inp { /* input属于行内块元素 */
+	width: 242px;
+	height: 37px;
+	border: 1px solid #cccccc;
+	margin-right: 10px;
+}
+.registerarea_bd ul li .error {
+	color: #c81523;
+}
+.registerarea_bd ul .safe {
+	padding-left: 170px;
+}
+.registerarea_bd ul .safe em {
+	padding: 0 15px;
+}
+.registerarea_bd ul .safe .one {
+	background-color: red;
+}
+.registerarea_bd ul .safe .two {
+	background-color: green;
+}
+.registerarea_bd ul .safe .three {
+	background-color: yellow;
+}
+.registerarea_bd ul .agree input{     /* 要看清想要方框和文字对齐 写哪个标签 */
+	vertical-align: middle; /* 使小方框和文字在同一行显示 */
+}
+.registerarea_bd ul .agree {
+	padding-left: 110px;
+}
+.registerarea_bd ul .agree a {
+	color: blue;
+}
+.registerarea_bd ul li:last-child {
+	width: 180px;
+	height: 30px;
+	background-color:#c84634;
+	font-size: 14px;
+	text-align: center;
+	color: #ffffff;
+	line-height: 30px;
+	margin-left: 120px;
+	margin-top: 20px;
+}
+.mod_copyright {
+	text-align: center;
+	padding-top: 20px;
+}
+.mod_copyright .links {
+	margin-bottom: 15px;
+}
+.mod_copyright .copyright {
+	line-height: 20px;
+}

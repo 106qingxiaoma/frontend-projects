@@ -1,0 +1,254 @@
+                                   /* header,nav,footer模块样式文件 */
+
+/* 声明字体图标。注意更换路径 "../" */
+@font-face {
+			  font-family: 'icomoon';
+			  src:  url('../fonts/icomoon.eot?95x02a');
+			  src:  url('../fonts/icomoon.eot?95x02a#iefix') format('embedded-opentype'),
+			    url('../fonts/icomoon.ttf?95x02a') format('truetype'),
+			    url('../fonts/icomoon.woff?95x02a') format('woff'),
+			    url('../fonts/icomoon.svg?95x02a#icomoon') format('svg');
+			  font-weight: normal;
+			  font-style: normal;
+			  font-display: block;
+			}
+/* 版心 */
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+/* 快捷导航模块 */
+.shortcut {
+	height: 31px;
+	background-color: #eaeaea;
+}
+.shortcut .w .fl {
+	float: left;
+}
+.shortcut .w .fl li {
+	float: left;
+	line-height: 31px;
+	font-size: 16px;
+}
+.shortcut .w .fr li {
+	float: right;
+	line-height: 31px;
+	font-size: 16px;
+}
+.shortcut .w .fr li:nth-child(even) {    /* 选择所有偶数的li添加竖线 */
+	width: 1px;
+	height: 12px;
+	background-color: #666666;
+	margin: 9px 15px;
+}
+.shortcut .w .fr .arrow-icon::after {
+	content: '';
+	font-family: 'icomoon';
+	margin-left:8px;
+}
+/* 头部模块制作 */
+.header {
+	position: relative;
+	height: 105px;
+	width: 1200px;
+	margin: 0 auto;
+}
+.header .logo {
+	position: absolute;
+	top: 25px;
+	width: 171px;
+	height: 61px;
+}
+.header .logo a {
+	display: block;
+	width: 171px;
+	height: 61px;
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	font-size: 0;
+}
+.header .search {
+	position: absolute;
+	left: 346px;
+	top: 25px;
+	width: 538px;
+	height: 36px;
+	border: 2px solid #b1191a;
+}
+.header .search input {
+	float: left;
+	width: 454px;
+	height: 32px;
+	padding-left: 10px;     /* 将placeholder的文字设置为距离左侧边框10像素 */
+}
+.header .search button {
+	float: left;
+	width: 80px;
+	height: 32px;
+	background-color: #b1191a;
+	font-size: 16px;
+	color: #ffffff;
+}
+.header .hotwords {
+	position: absolute;
+	left: 346px;
+	top: 66px;
+}
+.header .hotwords a {
+	margin:0 10px ;
+}
+.header .hotwords .redstyle {
+	color: red;
+}
+.header .shopcar {
+	position: absolute;
+	right: 60px;
+	top:25px;
+	width: 140px;
+	height: 35px;
+	border: 1px solid #dfdfdf;
+	background-color: #f7f7f7;
+	line-height: 35px;
+	text-align: center;
+}
+.header .shopcar::before {
+	content: '';
+	font-family: 'icomoon';     /* 替代购物车图标 */
+	margin-right: 5px;
+	color: #b1191a;
+}
+.header .shopcar::after {
+	content: '';
+	font-family: 'icomoon';
+	margin-left: 10px;
+}
+.header .shopcar .count {
+	position: absolute;      /* 子绝父绝 */
+	top: -5px;
+	left: 105px;
+	height: 14px;           /* 这里不要给宽度,因为数量可能会是两位数或者三位数,让其自动撑大盒子 */
+	line-height: 14px;
+	color: #ffffff;
+	background-color: #b1191a;
+	padding: 0 5px;
+	border-radius:7px 7px 7px 0;
+}
+/* nav模块制作 */
+.nav {
+	height: 47px;
+	border-bottom: 2px solid #b1191a;
+}
+.nav .w .dropdown {
+	float: left;
+	width: 210px;
+	height: 45px;
+	background-color: #b1191a;
+}
+.nav .w .navitems {
+	float: left;
+}
+.nav .w .dropdown .dt {
+	color: #ffffff;
+	text-align: center;
+	line-height: 45px;
+	font-size: 16px;
+}
+.nav .w .dropdown .dd {
+	width: 210px;
+	height: 465px;
+	background-color: #c81623;
+	margin-top: 2px;
+}
+.nav .w .dropdown .dd li {
+	height: 31px;
+	width: 210px;
+	line-height: 31px;
+}
+.nav .w .dropdown .dd li a {     /* 给a设置padding值可以使链接触发的范围更大,用户体验更好 */
+	color: #ffffff;
+	font-size: 14px;
+	padding-left: 20px;
+}
+.nav .w .dropdown .dd li:hover {
+	background-color: #fff;
+	margin-left: 2px;
+}
+.nav .w .dropdown .dd li:hover a {    /* 注意这个写的顺序,鼠标在li上悬停时a变颜色 */
+	color: #c81623;
+}
+.nav .w .dropdown .dd li::after {
+	content: '';
+	font-family: 'icomoon'; 
+	color: #ffffff;
+	float: right;
+	margin-right: 10px;
+	font-size: 14px;
+}
+.nav .w .navitems li {
+	float: left;
+}
+.nav .w .navitems li a {     /* 给a设置padding值可以使链接触发的范围更大,用户体验更好 */
+	display: block;
+	height: 45px;
+	line-height:45px;
+	font-size: 16px;
+	padding: 0px 25px;      /* 因为a里的字数都不一样,所以要设置padding值成大盒子,而不用margin */
+}
+/* 底部模块制作 */
+.footer {
+	height: 415px;
+	background-color: #f5f5f5;
+}
+.footer .w .mod_sevice {
+	height: 110px;
+	border-bottom: 1px solid #cccccc;
+}
+.mod_sevice ul li {
+	float: left;
+	width: 300px;
+	height: 50px;
+	margin-top: 30px;
+	padding-left: 35px;
+}
+.mod_sevice ul li h5 {
+	float: left;     /* 给图标加上浮动,文字会围绕图标浮动 */
+	width: 50px;
+	height: 50px;
+	background-color: purple;
+	border-radius: 25px;
+	margin-right: 8px;
+}
+.sevice_txt h4 {
+	font-size: 14px;
+}
+.sevice_txt p {
+	font-size: 12px;
+}
+.mod_help {
+	height: 185px;
+	border-bottom: 1px solid #cccccc;
+	padding-top: 20px;
+	padding-left: 50px;
+}
+.mod_help dl dt {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.mod_help dl {
+	float: left;
+	width: 200px;
+}
+.mod_help dl:last-child {    /* 最后一个dl的宽度和别的不一样,可以用结构伪类选择器选中最后一个孩子 */
+	width: 90px;
+}
+.mod_copyright {
+	text-align: center;
+	padding-top: 20px;
+}
+.mod_copyright .links {
+	margin-bottom: 15px;
+}
+.mod_copyright .copyright {
+	line-height: 20px;
+}
