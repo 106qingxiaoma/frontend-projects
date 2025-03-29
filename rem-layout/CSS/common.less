@@ -1,0 +1,72 @@
+// 设置常见屏幕尺寸，利用媒体查询根据屏幕尺寸不同设置不同的html字体大小
+// 统一把划分次数定为15
+@avg:15;   //这样定义方便后面更改划分次数
+html {
+    font-size: 50px;
+}
+// 320px   (屏幕尺寸一般不会小于320px)
+@media screen and (min-width:320px){
+    html {
+        font-size: (320px / @avg);
+    }
+}
+//360px
+@media screen and (min-width:360px){
+    html {
+        font-size: (360px / @avg);
+    }
+}
+//375px
+@media screen and (min-width:375px){
+    html {
+        font-size: (375px / @avg);
+    }
+}
+//384px
+@media screen and (min-width:384px){
+    html {
+        font-size: (384px / @avg);
+    }
+}
+//400px
+@media screen and (min-width:400px){
+    html {
+        font-size: (400px / @avg);
+    }
+}
+//414px
+@media screen and (min-width:414px){
+    html {
+        font-size: (414px / @avg);
+    }
+}
+//424px
+@media screen and (min-width:424px){
+    html {
+        font-size: (424px / @avg);
+    }
+}
+//480px
+@media screen and (min-width:480px){
+    html {
+        font-size: (480px / @avg);
+    }
+}
+//540px
+@media screen and (min-width:540px){
+    html {
+        font-size: (540px / @avg);
+    }
+}
+//720px
+@media screen and (min-width:720px){
+    html {
+        font-size: (720px / @avg);
+    }
+}
+//750px
+@media screen and (min-width:750px){
+    html {
+        font-size: (750px / @avg);
+    }
+}

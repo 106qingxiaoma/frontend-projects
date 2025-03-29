@@ -1,0 +1,100 @@
+// 首页样式less文件
+a {
+    text-decoration: none;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+// 将common.less文件导入到index.less文件中
+@import "common";  //@import是将一个样式文件导入到另一个样式文件里；link是把一个样式文件导入到html页面里
+body {
+    min-width: 320px;   //最小宽度
+    width: 15rem;
+    margin:0 auto;
+    line-height: 1.5;
+    font-family: Arial,Helvetica;
+    background: #F2F2F2;
+}
+//页面元素rem计算公式：页面元素的真实px值/html的字体大小（默认为750的设计稿，所以html字体大小为50）
+@font:50;
+// 头部
+.top {
+    display: flex;
+    position: fixed;   //头部是固定的
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;    //固定定位必须有宽度
+    height: (88rem/@font);   //要加括号！！！
+    background-color: pink;
+    .classify {
+        width:(44rem / @font);
+        height:(70rem / @font);
+        margin:(11rem / @font) (25rem / @font) (7rem / @font) (24rem / @font);
+        background: url(../images/classify.png) no-repeat;
+        // 背景图片缩放，随着盒子变化而变化
+        background-size:(44rem / @font);
+    }
+    .search {
+        flex: 1;
+        input {
+            border: 0;   //input默认会有边框，把边框去掉用border:0
+            width: 100%;
+            height: (66rem/@font);
+            border-radius: (33rem/@font);
+            background-color: #fff2cc;
+            margin-top: (12rem/@font);
+            font-size:(20rem/@font);
+            padding-left:(55rem/@font);//设置文字与表单的距离
+            color:#757575
+        }
+    }
+    .login {
+        width: (75rem/@font);
+        height:(70rem/@font);
+        margin: (10rem/@font);
+        font-size:(25rem/@font);
+        text-align: center;
+        color: #fff;
+        line-height: (70rem/@font);
+    }
+}
+//  banner部分 
+.banner {
+    width: (750rem/@font);
+    height: (368rem/@font); 
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+// 广告部分
+.ad {
+    display: flex;
+    width: (750rem/@font);
+    height: (220rem/@font); 
+    img {
+        width: 100%;
+        height: 100%;
+        flex:1;
+    }
+}
+// nav部分
+.nav {
+    display: flex;
+    background-color: yellow;
+    flex-wrap: wrap;
+    text-align: center;
+    span {
+        flex:20%;
+        font-size: (12rem/@font);
+        img {
+            display: block;
+            width:(82rem/@font);
+            height:(82rem/@font);
+            margin:(10rem/@font) auto 0;
+        }
+    }
+}
