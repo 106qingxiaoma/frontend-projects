@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0px;
+	padding: 0px;
+	list-style:none;
+}
+body{
+	padding-top: 10px;
+	margin-top: auto;
+	font-family: Arial, Helvetica, sans-serif;	
+	background-image:linear-gradient(50deg,#f7ebe1,#f7dff1);
+}
+.box .nav {
+	height: 50px;
+	width: 1000px;
+}
+.box .nav ul {
+	margin: auto;
+	padding: 20px;
+	box-sizing: border-box;
+	height: 55px;
+	width: 1000px;
+	background-color: #c7e1f3;
+}
+.box .nav ul li {
+	float: left;
+	margin-right: 80px;
+	margin-left: 50px;
+	list-style:none;
+}
+.box .nav ul li a {
+	color: #000;
+	text-decoration: none;
+}
+.box .nav ul li:hover{
+	background-color: #FFF;
+}
+body{
+	display:flex;
+	justify-content:center;
+	olign-items:center;
+	}
+	
+.box .box1 p {
+	height: 30px;
+	width: 100px;
+	margin-top: 5px;
+	margin-right: auto;
+	margin-bottom: 5px;
+	margin-left: auto;
+	border: 1px solid #000;
+	background-color: #C99;
+	font-size: 24px;
+	color: #333;
+	border-radius:10px;
+	text-align:center;
+}
+.box {
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	width: 1000px;
+	height: 1000px;
+}
+.container {
+	width: 900px;
+	position: relative;
+	display:flex;
+	justify-content:center;
+	olign-items:center;
+	flex-wrap:wrap;
+	padding:30px;
+}
+
+.container .card {
+	height: 420px;
+	position: relative;
+	max-width:300px;
+	background:#fff;
+	margin:30px 10px;
+	padding:20px 15px;
+	display:flex;
+	flex-direction:column;
+	box-shadow:0 5px 202px rgba(0,0,0,0.5);
+	transition:0.3s ease-in-out;
+}
+.container .card:hover{
+	height:420px;
+	}
+.container .card .imgBx {
+	height: 260px;
+	width: 260px;
+	position: relative;
+	top:-60px;
+	left:20px;
+	box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+.container .card .imgBx img{
+	max-width:100%;
+	border-radius:4px;
+}
+.container .card .content{
+	position:relative;
+	margin-top:-140px;
+	padding10px 15px;
+	text-align:center;
+	color:#111;
+	visiblity:hidden;
+	opacity:0;
+	transition:0.3s ease-in-out;
+}
+.container .card:hover .content{
+	visibility:visible;
+	opacity:1;
+	margin-top:-140px;
+	transition-delay:0.3s
+}

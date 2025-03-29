@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing:border-box;
+}
+body {
+	width: 100%;
+	height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	padding-top: 10px;
+	margin-top: auto;
+	font-family: Arial, Helvetica, sans-serif;	
+	background-image:linear-gradient(50deg,#f7ebe1,#f7dff1);
+}
+
+.container {
+	width: 100%;
+	max-width:1050px;
+	border-radius:12px;
+	background:#fff;
+	margin:0 20px;
+	box-shadow:0 5px 10px rgba(0,0,0,0.15);
+}
+.container .content {
+	display:flex;
+	align-items:center;
+	justify-content:space-between;
+	padding:25px 20px;
+}
+.content topic{
+	font-size: 22px;
+	font-weight: 500;
+	color: #ba24c2;
+}
+.container .content .image-box {
+    max-width:55%;
+}
+.container .content .image-box img {
+  width:100%;
+}
+.container .content form {
+	width: 40%;
+	margin-right:30px;
+}
+.container .content form .input-box {
+	height: 50px;
+	width: 100px;
+	margin-top: 16px;
+	margin-right: 0px;
+	margin-bottom: 16px;
+	margin-left: 0px;
+	position: relative;
+}
+.container .content form .input-box input {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border-radius:6px;
+	outline:none;
+	border:2px solid transparent;
+	padding-left:16px;
+	font-size:16px;
+	background-image:linear-gradient(50deg,#f7ebe1,#f7dff1);
+	transition:all 0.3s ease;
+}
+.container .content form .input-box label {
+	font-style: normal;
+	color: #636c72;
+	position: absolute;
+	left: 18px;
+	top: 50%;
+	pointer-events:none;
+	transform:translateY(-50%);
+	font-size:15px;
+	transition:all 0.3s ease;
+}
+.content .input-box input:focus~label,
+.content .input-box input:valid~label{
+	color: #ba24c2;
+	left: 12px;
+	top: 0px;	
+	background:#fff;
+	display:14px;
+}
+.content .input-box input:valid,
+.content .input-box input:valid{
+	background-color:#fff;
+	border-color:#ba24c2;
+}
+.container .content form .message-box {
+	position: relative;
+	min-height:100px;
+}
+.container .content form .message-box textarea {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	border-radius:6px;
+	outline:none;
+	resize:none;
+	background:#fae9fb;
+	border:2px solid transparent;
+	transition:all 0.3s ease;
+	
+}
+.container .content form .message-box label {
+	font-size: 16px;
+	color: #636c72;
+	position: absolute;
+	left: 18px;
+	top: 6px;
+	pointer-events:none;
+}
+.container .content form .message-box textarea:focus~label{
+left:12px;
+top:-10px;
+color:#ba24c2;
+background:#fff;
+font-size:12px;
+}
+.container .content form .message-box textarea:focus{
+border-color:#ba24c2;
+background-color:#fff;
+}
+.content .input-box input[type="submit"]{
+color:#fff;
+background:#ba24c2;
+padding-left:0;
+font-size:18px;
+font-weight:500px;
+letter-spacing:1px;
+cursor:pointer;
+transition:all 0.3s ease;
+}
+.content .input-box input[type="submit"]:hover{
+background-color:#d43ddb;
+}
+.container p {
+	height: 30px;
+	width: 100px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	border: 1px solid #000;
+	background-color: #C99;
+	font-size: 24px;
+	color: #333;
+	border-radius:10px;
+	text-align:center;
+}
