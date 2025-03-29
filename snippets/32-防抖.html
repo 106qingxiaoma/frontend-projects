@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: #ccc;
+            color: #fff;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="./lodash.min.js"></script>
+    <script>
+        //实例：鼠标在盒子上移动，数字+1
+        // const box=document.querySelector(".box")
+        // let i=1
+        // function mouseMove() {
+        //     box.innerHTML=i++
+        // }
+        // box.addEventListener('mousemove',mouseMove)
+        //这样做可能造成页面卡顿，所以可以设置鼠标停止多少毫秒之后再加一
+        
+        // const box=document.querySelector(".box")
+        // let i=1
+        // function mouseMove() {
+        //     box.innerHTML=i++
+        // }
+        // //利用lodash库实现防抖，200毫秒之后+1
+        // box.addEventListener('mousemove',_.debounce(mouseMove,200))
+
+        //手写防抖函数
+        //核心是利用定时器setTimeout实现
+        //1.声明定时器变量
+        //2.每次鼠标移动的时候先判断是否有定时器，有的话清除掉前边的定时器
+        //3.没有的话，开启定时器，存入到定时器变量里面
+        //4.定时器里面写函数调用
+        const box=document.querySelector(".box")
+        let i=1
+        function mouseMove() {
+            box.innerHTML=i++
+        }
+        function debounce(fn,t) {
+            let timer
+            return function(){
+                if(timer) clearTimeout(timer)
+                timer=setTimeout(function() {
+            fn()
+        },t)
+    }
+}
+       box.addEventListener('mousemove',debounce(mouseMove,500))
+    </script>
+</body>
+</html> 

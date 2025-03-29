@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: #ccc;
+            color: #fff;
+            text-align: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <script src="./lodash.min.js"></script>
+    <script>
+        // const box=document.querySelector(".box")
+        // let i=1
+        // function mouseMove() {
+        //     box.innerHTML=i++
+        // }
+        // //利用lodash库实现节流，200毫秒之后+1
+        // box.addEventListener('mousemove',_.throttle(mouseMove,2000))
+
+        //手写节流函数
+        //核心是利用定时器setTimeout实现
+        //1.声明定时器变量
+        //2.每次鼠标移动的时候先判断是否有定时器，有的话不开启定时器
+        //3.没有的话，开启定时器，存入到定时器变量里面
+        //4.定时器里面写函数调用，时间到了清空定时器
+        const box=document.querySelector(".box")
+        let i=1
+        function mouseMove() {
+            box.innerHTML=i++
+        }
+        function throttle(fn,t) {
+            let timer=null
+            return function(){
+                if(!timer) {
+                    timer=setTimeout(function() {
+                        fn()
+                        timer=null
+                    },t)  
+                }
+            }
+        }
+       box.addEventListener('mousemove',throttle(mouseMove,2000))
+    </script>
+</body> 
+</html>
