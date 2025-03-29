@@ -1,0 +1,53 @@
+/* 通用样式文件 */
+
+/* 用通配符选择器把内外边距清零 */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* em和i的斜体文字不倾斜 */
+em,i {
+	font-style: normal;
+}
+/* 去掉li前面的小圆点 */
+li {
+	list-style: none;
+}
+/* 取消图片底侧有空隙的问题 */
+img {
+	vertical-align: middle;
+}
+button {
+	cursor: pointer;      /* 鼠标的样式,pointer表示鼠标是小手的样式 */
+}
+a {
+	color: #666666;
+	text-decoration: none;
+}
+button,input {
+	font-family: Microsoft YaHei, Heiti SC,tahoma, arial,Hiragino Sans GB;
+	"\5888\4F53",sans-serif;
+	/* 默认有边框,我们需要去掉 */
+	border: 0;
+	outline: none;
+}
+body {
+	/* css3 抗锯齿形 让文字显示的更加清晰 */
+	-webit-font-smoothing:antialiased;
+	background-color: #fff;
+	font:12px/1.5 Microsoft YaHei, Heiti SC,tahoma, arial,Hiragino Sans GB;
+	color: #666666;
+}
+/* 清除浮动 */
+/* 是给浮动的元素的父亲添加类标签clearfix去清除浮动 */
+.clearfix:after{
+				content:"";
+				display:block;
+				height: 0px;
+				clear:both;
+				visibility:hidden;
+			}
+			.clearfix {
+				*zoom:1;
+			}
