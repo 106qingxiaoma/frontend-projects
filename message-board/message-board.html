@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		div {
+			width: 800px;
+			height: 500px;
+			margin: 100px auto;
+			border: 3px solid green;
+		}
+		h1 {
+			text-align: center;
+			font-size: 36px;
+		}
+		ul {
+			width: 615px;
+			height: 296px;
+			margin-left: 72px;
+			border: 2px dotted green;
+		}
+		textarea {
+			margin-left: 180px;
+			width: 400px;
+			height:30px;
+		}
+		.sub {
+			display: block;
+			width: 150px;
+			height: 30px;
+			margin-left: 280px;
+			margin-top: 10px;
+			background-color: green;
+		}
+		li {
+			width: 539px;
+			height: 28px;
+			margin-left: 28px;
+			margin-top: 5px;
+			background-color: greenyellow;
+		}
+		.remove {
+			float: right;
+			width: 50px;
+			height: 20px;
+			margin-top: 5px;
+		}
+	</style>
+	<body>
+		<div>
+			<h1>留言板</h1>
+			<ul></ul>
+			<textarea placeholder="请编辑您的留言"></textarea>
+			<button class="sub">发布</button>
+		</div>
+		<script>
+			var btn=document.querySelector(".sub");
+			var ul=document.querySelector("ul");
+			var text=document.querySelector("textarea");
+			btn.addEventListener("click",function(){
+				if(text.value=="") {
+					alert("您没有输入内容");
+					return false;
+				}
+				else {
+					var li=document.createElement("li");//创建节点
+					li.innerHTML=text.value;//文本输入框的值是value，表示方式是:text.value
+					var button=document.createElement("button");//创建删除按钮
+					button.classList.add("remove");
+					button.innerHTML="删除";
+					button.addEventListener("click",function(){
+						ul.removeChild(this.parentNode);
+					//this.parentNode代表的是当前元素的父节点,即li;li的父节点是ul,即用ul来调用
+					})
+					li.appendChild(button);
+					ul.insertBefore(li,ul.children[0]);//添加节点
+					text.value="";//添加节点之后，清楚文本域中的内容
+				}
+			})
+		</script>
+	</body>
+</html>
