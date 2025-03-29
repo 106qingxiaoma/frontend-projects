@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+		<meta charset="utf-8" />
+		<title>随机抽题系统</title>
+		<style type="text/css">
+		*{margin:0;padding:0;list-style-type:none;}
+		a,img{border:0;}
+		body{font:12px/180% "Microsoft YaHei","微软雅黑", "宋体";}
+		
+		#bodybj{background:url(images.jpg) no-repeat center top;}
+		#box{margin:auto;width:660px;font-size:66px;height:94px;line-height:94px;overflow:hidden;color:#138eee;text-align:center;padding:0 30px;margin-top:200px;}
+		#bt{margin:auto;width:200px;text-align:center;margin-top:75px;color:#fff;font-size:25px;line-height:28px;cursor:pointer;}
+		</style>
+	</head>
+	<body id="bodybj">
+		<script type="text/javascript">
+		var namelist=[
+			"1号球","2号球","3号球","4号球","5号球","6号球","7号球","8号球","9号球","10号球"];
+			var mytime=null;
+			function doit(){
+				var bt=window.document.getElementById("bt");
+				if(mytime==null){
+					bt.innerHTML="停止抽奖";
+					show();
+			}else{
+				bt.innerHTML="开始抽奖";
+				clearTimeout(mytime);
+				mytime=null;
+				}
+			}
+			
+			function show(){
+				var box=window.document.getElementById("box");
+				var num=Math.floor((Math.random()*100000))%namelist.length;
+				box.innerHTML=namelist[num];
+				mytime=setTimeout("show()",1);
+			}
+			</script>
+		<div id="box">准备好了,开始抽奖了</div>
+		<div id="bt" onClick="doit()">开始抽奖</div>
+		<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+		<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. </p>
+		
+		</div>
+	</body>
+</html>
